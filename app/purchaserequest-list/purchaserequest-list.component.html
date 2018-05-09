@@ -1,0 +1,24 @@
+<ActionBar class="action-bar">
+  <Label class="action-bar-title" text="Purchase Requests"></Label>
+</ActionBar>
+<ListView [items]="purchaserequests">
+  <ng-template let-pr="item">
+  <StackLayout orientation="vertical">
+    <Label fontSize="20" text="Order for {{pr.User.FirstName}} {{pr.User.LastName}}" textAlignment="center"></Label>
+    <Label fontSize="15" text="{{pr.Description}}    Total: {{pr.Total}}    Status: {{pr.Status}}      Date Submitted:  {{pr.submittedDate}}" class="p-15" textAlignment="center"></Label>
+  </StackLayout>
+  </ng-template>
+</ListView>
+
+<!--<ListView [items]="purchaserequests" class="list-group">-->
+  <!--<ng-template let-pr="item" let-i="index" let-odd="odd" let-even="even">-->
+    <!--<GridLayout columns="auto, *" rows="auto, *" class="list-group-item">-->
+      <!--<Label text="Id" col="0" row="0" class="p-15"></Label>-->
+      <!--<Label text="UserName" col="1" row="0" class="p-15"></Label>-->
+      <!--<Label [text]="pr.Id" col="0" row="1"class="p-15"></Label>-->
+      <!--<Label [text]="pr.User.UserName + ' this is a test'"  col="1" row="1" class="p-15"></Label>-->
+
+
+    <!--</GridLayout>-->
+  <!--</ng-template>-->
+<!--</ListView>-->
